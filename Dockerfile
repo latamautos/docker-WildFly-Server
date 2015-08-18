@@ -5,7 +5,7 @@ COPY driver/module.xml /opt/jboss/wildfly/modules/com/mysql/main/
 COPY driver/mysql-connector-java-5.1.36-bin.jar /opt/jboss/wildfly/modules/com/mysql/main/
 COPY standalone.xml /opt/jboss/wildfly/standalone/configuration/standalone-full.xml
 
-RUN mkdir /tmp/latamautos-static-content
+RUN mkdir -p /opt/jboss/wildfly/latamautos-static-content/
 
 USER root
 RUN chmod -R 777 /opt/jboss/wildfly/customization/
