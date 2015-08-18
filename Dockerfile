@@ -5,7 +5,7 @@ COPY driver/module.xml /opt/jboss/wildfly/modules/com/mysql/main/
 COPY driver/mysql-connector-java-5.1.36-bin.jar /opt/jboss/wildfly/modules/com/mysql/main/
 COPY standalone.xml /opt/jboss/wildfly/standalone/configuration/standalone-full.xml
 
-RUN mkdir /tmp/latamautos-static-folder
+RUN mkdir /tmp/latamautos-static-content
 
 USER root
 RUN chmod -R 777 /opt/jboss/wildfly/customization/
@@ -25,7 +25,7 @@ ENV MONGO_PORT='27017' \
 	MYSQL_DB="apirds" \
     ELASTIC_HOST="me.api.latamautos.com" \
 	ELASTIC_PORT="9300" \
-	PROPERTIES_PATH="/tmp/latamautos-static-folder" \
+	PROPERTIES_PATH="/tmp/latamautos-static-content" \
 	JAVA_OPTS="-Xms256m -Xmx1024m -XX:MaxPermSize=512m -Djava.net.preferIPv4Stack=true" \
 	API_ADMIN_JAVA=admin.api.latamautos.com \
 	API_MESSAGES_JAVA=messages.api.latamautos.com \
