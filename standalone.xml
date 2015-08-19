@@ -150,7 +150,7 @@
                     </security>
                 </datasource>
                 <datasource jta="true" jndi-name="java:jboss/datasources/ExampleMySQLDS" pool-name="mysqlDS" enabled="true" use-ccm="true">
-                    <connection-url>jdbc:mysql://${env.MSQL_HOST}:${env.MYSQL_PORT}/${env.MYSQL_DB}</connection-url>
+                    <connection-url>jdbc:mysql://${env.MYSQL_HOST}:${env.MYSQL_PORT}/${env.MYSQL_DB}</connection-url>
                     <driver-class>com.mysql.jdbc.Driver</driver-class>
                     <driver>com.mysql.XA</driver>
                     <security>
