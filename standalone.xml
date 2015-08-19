@@ -150,12 +150,12 @@
                     </security>
                 </datasource>
                 <datasource jta="true" jndi-name="java:jboss/datasources/ExampleMySQLDS" pool-name="mysqlDS" enabled="true" use-ccm="true">
-                    <connection-url>jdbc:mysql://apijavax.c9ngksmduxvg.us-east-1.rds.amazonaws.com:3306/apirds</connection-url>
+                    <connection-url>jdbc:mysql://${env.MSQL_HOST}:${env.MYSQL_PORT}/${env.MYSQL_DB}</connection-url>
                     <driver-class>com.mysql.jdbc.Driver</driver-class>
                     <driver>com.mysql.XA</driver>
                     <security>
-                        <user-name>user_api_rds</user-name>
-                        <password>LATAMsnSVptgAPILNvX5CdrKPASS</password>
+                        <user-name>${env.MYSQL_USER}</user-name>
+                        <password>${env.MYSQL_PASSWORD}</password>
                     </security>
                     <validation>
                         <validate-on-match>false</validate-on-match>
